@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Siete | Curso de Pareja basado en Astrología</title>
+    <meta name="description" content="Nuestra relación de pareja es nuestro espejo de mayor crecimiento. Un viaje de 4 semanas con Astrología: Luna, Descendente y Venus.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            night: '#1C1625',      // Deep mystical background / text
+                            plum: '#3A2541',       // Dark purple/plum accent
+                            wine: '#6B304A',       // Warm romantic wine accent
+                            rose: '#D4A3A1',       // Soft rose dusty accent
+                            gold: '#C5A059',       // Warm gold celestial accent
+                            'gold-hover': '#B08C46',
+                            'gold-light': '#F4ECE0',
+                            cream: '#FAF6F0',      // Soft warm background
+                            'cream-card': '#FFFDF9',
+                            muted: '#6E6775'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FAF6F0;
+            color: #1C1625;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .star-pattern {
+            background-image: radial-gradient(rgba(197, 160, 89, 0.15) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-brand-cream text-brand-night antialiased selection:bg-brand-gold/30 selection:text-brand-night star-pattern">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-brand-cream/90 backdrop-blur-md border-b border-brand-gold/20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2">
+                <span class="text-brand-gold text-2xl">✨</span>
+                <span class="font-serif text-2xl font-bold tracking-wide text-brand-night">Casa Siete</span>
+            </a>
+            <div class="flex items-center gap-4">
+                <a href="#audiencia" class="hidden sm:inline-block text-sm font-medium text-brand-night/80 hover:text-brand-wine transition-colors">¿Para quién es?</a>
+                <a href="#contenido" class="hidden sm:inline-block text-sm font-medium text-brand-night/80 hover:text-brand-wine transition-colors">Contenido</a>
+                <a href="#registro" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-medium text-white bg-brand-plum hover:bg-brand-wine transition-all shadow-sm hover:shadow-md">
+                    Inscribirme
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden py-16 lg:py-24 border-b border-brand-gold/10">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <!-- Badge for Instagram Visitors -->
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-gold-light border border-brand-gold/30 text-brand-plum text-xs sm:text-sm font-medium mb-6">
+                    <span>🔮</span>
+                    <span>Curso de Pareja basado en Astrología</span>
+                </div>
+
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal leading-tight sm:leading-tight text-brand-night max-w-4xl mx-auto">
+                    Tu relación de pareja es tu espejo de mayor <span class="italic text-brand-wine">crecimiento</span>.
+                </h1>
+
+                <p class="mt-6 text-lg sm:text-xl text-brand-muted font-normal max-w-2xl mx-auto leading-relaxed">
+                    En esta vida todos venimos a compartir y ser felices al lado de la persona que amamos. Aprende a comprender la dinámica de tu relación a través del mapa cósmico.
+                </p>
+
+                <!-- Action Buttons (No forms yet, as instructed) -->
+                <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#registro" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-gold text-white font-semibold text-base hover:bg-brand-gold-hover transition-all shadow-lg shadow-brand-gold/20 hover:shadow-xl">
+                        Quiero unirme al curso ✨
+                    </a>
+                    <a href="#filosofia" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full bg-white text-brand-night border border-brand-gold/40 font-medium text-base hover:bg-brand-cream-card hover:border-brand-gold transition-all">
+                        Descubrir más
+                    </a>
+                </div>
+
+                <!-- Course Quick Highlights -->
+                <div class="mt-12 pt-8 border-t border-brand-gold/20 max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+                    <div class="p-3">
+                        <span class="block text-2xl font-serif font-semibold text-brand-wine">4 Semanas</span>
+                        <span class="text-xs sm:text-sm text-brand-muted">Duración del programa</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="block text-2xl font-serif font-semibold text-brand-wine">Online & Guiado</span>
+                        <span class="text-xs sm:text-sm text-brand-muted">Acompañamiento personalizado</span>
+                    </div>
+                    <div class="p-3 col-span-2 md:col-span-1">
+                        <span class="block text-2xl font-serif font-semibold text-brand-wine">Lindas Sorpresas</span>
+                        <span class="text-xs sm:text-sm text-brand-muted">Durante el camino</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy / Mirror Concept Section -->
+        <section id="filosofia" class="py-16 sm:py-20 bg-brand-cream-card border-b border-brand-gold/10">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <span class="text-brand-gold text-3xl">🌙</span>
+                <h2 class="mt-3 font-serif text-3xl sm:text-4xl text-brand-night">
+                    El Espejo de las Relaciones
+                </h2>
+                <div class="mt-6 space-y-4 text-base sm:text-lg text-brand-night/80 leading-relaxed max-w-3xl mx-auto">
+                    <p>
+                        Bienvenida a <strong class="font-semibold text-brand-plum">Casa Siete</strong>. En la astrología, la Casa VII representa los vínculos comprometidos, el espejo donde nos miramos a través del otro.
+                    </p>
+                    <p>
+                        Nuestra pareja no llega por casualidad: es la proyección de nuestras necesidades emocionales, aprendizajes kármicos y forma más profunda de entregar amor. Comprender este lenguaje te permitirá transformar conflictos en puentes de intimidad.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Target Audience Section -->
+        <section id="audiencia" class="py-16 sm:py-24">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto">
+                    <span class="text-brand-wine text-xs uppercase tracking-widest font-semibold">¿Para quién es este curso?</span>
+                    <h2 class="mt-2 font-serif text-3xl sm:text-4xl text-brand-night">
+                        Un espacio diseñado para ti, sin importar en qué etapa te encuentres
+                    </h2>
+                    <p class="mt-4 text-base sm:text-lg text-brand-muted">
+                        Creemos que la astrología brinda respuestas valiosas en diferentes momentos de tu camino afectivo.
+                    </p>
+                </div>
+
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Option 1: Current Relationship -->
+                    <div class="bg-brand-cream-card rounded-2xl p-8 border border-brand-gold/20 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-brand-gold-light flex items-center justify-center text-2xl mb-6">
+                                💖
+                            </div>
+                            <h3 class="font-serif text-xl font-semibold text-brand-night mb-3">
+                                Si deseas mejorar tu relación actual
+                            </h3>
+                            <p class="text-brand-muted text-sm leading-relaxed">
+                                Diseñado especialmente para profundizar la conexión, entender las reacciones automáticas de ambos y fortalecer los cimientos diarios de su amor.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-brand-gold/10 text-xs font-medium text-brand-wine">
+                            ✓ Ideal para parejas en constante evolución
+                        </div>
+                    </div>
+
+                    <!-- Option 2: Looking for a partner -->
+                    <div class="bg-brand-cream-card rounded-2xl p-8 border border-brand-gold/20 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-brand-gold-light flex items-center justify-center text-2xl mb-6">
+                                ✨
+                            </div>
+                            <h3 class="font-serif text-xl font-semibold text-brand-night mb-3">
+                                Si estás buscando pareja
+                            </h3>
+                            <p class="text-brand-muted text-sm leading-relaxed">
+                                Comprende el patrón de pareja que tu alma busca atraer, sana heridas pasadas y prepárate emocionalmente para construir una relación consciente.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-brand-gold/10 text-xs font-medium text-brand-wine">
+                            ✓ Ideal para atraer amor sano y duradero
+                        </div>
+                    </div>
+
+                    <!-- Option 3: Harmonious Separation -->
+                    <div class="bg-brand-cream-card rounded-2xl p-8 border border-brand-gold/20 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-brand-gold-light flex items-center justify-center text-2xl mb-6">
+                                🕊️
+                            </div>
+                            <h3 class="font-serif text-xl font-semibold text-brand-night mb-3">
+                                Si consideras separarte armoniosamente
+                            </h3>
+                            <p class="text-brand-muted text-sm leading-relaxed">
+                                Si estás en una transición o considerando separarte, este curso te dará claridad y entendimiento para cerrar ciclos con gratitud y paz.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-brand-gold/10 text-xs font-medium text-brand-wine">
+                            ✓ Transición amorosa y consciente
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Content / Modules Section -->
+        <section id="contenido" class="py-16 sm:py-24 bg-brand-plum text-white relative overflow-hidden">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-3xl mx-auto">
+                    <span class="text-brand-rose text-xs uppercase tracking-widest font-semibold">Programa de 4 Semanas</span>
+                    <h2 class="mt-2 font-serif text-3xl sm:text-4xl text-brand-gold-light">
+                        El Viaje de Transformación
+                    </h2>
+                    <p class="mt-4 text-base sm:text-lg text-brand-rose/90">
+                        Un recorrido paso a paso explorando los pilares astrológicos de tus relaciones.
+                    </p>
+                </div>
+
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Week 1: La Luna -->
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all backdrop-blur-sm">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold-light border border-brand-gold/30">Semana 1 & 2</span>
+                            <span class="text-3xl">🌕</span>
+                        </div>
+                        <h3 class="font-serif text-2xl text-white font-medium mb-3">
+                            Las Emociones & Tu Luna
+                        </h3>
+                        <p class="text-brand-rose/80 text-sm leading-relaxed">
+                            Iniciaremos con las emociones y tu Luna, el factor que más influye en el día a día de tu relación. Entenderás tus necesidades emocionales profundas para evitar reaccionar negativamente y evitar hacer más graves los problemas cotidianos.
+                        </p>
+                    </div>
+
+                    <!-- Week 2: Karma & Descendente -->
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all backdrop-blur-sm">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold-light border border-brand-gold/30">Semana 3</span>
+                            <span class="text-3xl">⚖️</span>
+                        </div>
+                        <h3 class="font-serif text-2xl text-white font-medium mb-3">
+                            El Karma & Tu Descendente
+                        </h3>
+                        <p class="text-brand-rose/80 text-sm leading-relaxed">
+                            Pasaremos al karma, enfocándonos en tu Descendente: aquello que tu relación de pareja viene a enseñarte. Descubrirás las características que te toca cultivar para disfrutar de una relación sólida y duradera.
+                        </p>
+                    </div>
+
+                    <!-- Week 3: Venus -->
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all backdrop-blur-sm">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold-light border border-brand-gold/30">Semana 4</span>
+                            <span class="text-3xl">♀️</span>
+                        </div>
+                        <h3 class="font-serif text-2xl text-white font-medium mb-3">
+                            Venus & Tu Forma de Amar
+                        </h3>
+                        <p class="text-brand-rose/80 text-sm leading-relaxed">
+                            Exploraremos a Venus: tu lenguaje único para dar y recibir amor, además de los valores sobre los cuales tu relación necesita sostenerse para <strong class="text-brand-gold-light font-semibold">TRIUNFAR</strong> sobre los desafíos cotidianos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Surprises Banner -->
+                <div class="mt-12 bg-gradient-to-r from-brand-wine/80 to-brand-plum rounded-2xl p-6 sm:p-8 border border-brand-gold/30 text-center flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <div class="text-left">
+                        <div class="flex items-center gap-2 text-brand-gold-light font-serif text-xl font-semibold mb-1">
+                            <span>🎁</span>
+                            <span>Lindas sorpresas durante el camino</span>
+                        </div>
+                        <p class="text-brand-rose/80 text-sm">
+                            Además del contenido del curso, recibirás dinámicas especiales, recursos descargables y experiencias preparadas para enriquecer tu viaje.
+                        </p>
+                    </div>
+                    <a href="#registro" class="shrink-0 px-6 py-3 rounded-full bg-brand-gold text-white font-medium text-sm hover:bg-brand-gold-hover transition-all shadow-md">
+                        Reservar mi lugar
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Registration Intent Section -->
+        <section id="registro" class="py-20 sm:py-28 bg-brand-cream border-t border-brand-gold/20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <span class="text-4xl mb-4 block">✨</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-normal text-brand-night leading-tight">
+                    Da el primer paso hacia una relación más <span class="italic text-brand-wine">plena y consciente</span>.
+                </h2>
+                <p class="mt-6 text-base sm:text-lg text-brand-muted max-w-2xl mx-auto">
+                    El cupo es limitado para garantizar una experiencia cercana e íntima. Reserva tu interés para asegurar tu lugar.
+                </p>
+
+                <!-- Action Buttons (As instructed: placing buttons without form yet) -->
+                <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+                    <button type="button" onclick="alert('¡Gracias por tu interés en Casa Siete! El formulario de inscripción estará disponible próximamente.')" class="w-full sm:w-auto flex-1 inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-gold text-white font-semibold text-base hover:bg-brand-gold-hover transition-all shadow-lg shadow-brand-gold/20 hover:shadow-xl">
+                        Quiero inscribirme ✨
+                    </button>
+                    <button type="button" onclick="alert('Nos pondremos en contacto contigo muy pronto con más detalles del curso.')" class="w-full sm:w-auto flex-1 inline-flex items-center justify-center px-8 py-4 rounded-full bg-white text-brand-night border border-brand-gold/40 font-medium text-base hover:bg-brand-cream-card hover:border-brand-gold transition-all">
+                        Más información
+                    </button>
+                </div>
+
+                <p class="mt-4 text-xs text-brand-muted">
+                    🔒 Registro de interés sin compromiso. Te notificaremos las fechas exactas de apertura.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-night text-brand-rose/80 py-12 border-t border-brand-gold/20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="text-center md:text-left">
+                <div class="flex items-center justify-center md:justify-start gap-2 text-white font-serif text-xl font-bold">
+                    <span class="text-brand-gold">✨</span> Casa Siete
+                </div>
+                <p class="text-xs text-brand-rose/60 mt-1">
+                    Curso de pareja basado en Astrología. El espejo de tu crecimiento.
+                </p>
+            </div>
+            <div class="flex items-center gap-6 text-sm">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-brand-gold transition-colors flex items-center gap-1">
+                    <span>📱</span> Instagram
+                </a>
+                <a href="#contenido" class="hover:text-brand-gold transition-colors">Contenido</a>
+                <a href="#registro" class="hover:text-brand-gold transition-colors">Inscripción</a>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-6 border-t border-white/10 text-center text-xs text-brand-rose/40">
+            &copy; 2025 Casa Siete. Todos los derechos reservados.
+        </div>
+    </footer>
+
+</body>
+</html>
