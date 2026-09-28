@@ -306,12 +306,6 @@
         <!-- Dedicated Single-Page Form View Container (Hidden initially) -->
         <div id="formView" class="hidden min-h-[calc(100vh-80px)] py-12 sm:py-16 bg-brand-cream">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Navigation Back Button -->
-                <button type="button" id="backToLandingBtn" class="inline-flex items-center gap-2 text-sm font-medium text-brand-plum hover:text-brand-wine transition-colors mb-8 cursor-pointer">
-                    <span>←</span>
-                    <span>Volver a la página principal</span>
-                </button>
-
                 <!-- Page Header -->
                 <div class="text-center mb-10">
                     <span class="text-3xl mb-2 block">✨</span>
@@ -354,12 +348,9 @@
 
                         <!-- Field 2: Email -->
                         <div>
-                            <div class="flex justify-between items-center mb-1.5">
-                                <label for="email" class="block text-sm font-semibold text-brand-night">
-                                    Correo electrónico
-                                </label>
-                                <span class="text-xs text-brand-muted italic">El email o teléfono es obligatorio</span>
-                            </div>
+                            <label for="email" class="block text-sm font-semibold text-brand-night mb-1.5">
+                                Correo electrónico
+                            </label>
                             <input
                                 type="email"
                                 id="email"
@@ -427,25 +418,6 @@
                             </div>
                         </div>
 
-                        <!-- Field 4: Goal (Objetivo) Select Dropdown -->
-                        <div>
-                            <label for="goal" class="block text-sm font-semibold text-brand-night mb-1.5">
-                                Objetivo principal <span class="text-brand-wine">*</span>
-                            </label>
-                            <select
-                                id="goal"
-                                name="goal"
-                                required
-                                class="w-full px-4 py-3 rounded-xl border border-brand-gold/30 bg-white text-brand-night focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all text-sm sm:text-base"
-                            >
-                                <option value="" disabled selected>Selecciona una opción</option>
-                                <option value="mejorar mi relacion">mejorar mi relacion</option>
-                                <option value="encontrar pareja">encontrar pareja</option>
-                                <option value="sanar una relacion pasada">sanar una relacion pasada</option>
-                                <option value="separarme armoniosamente">separarme armoniosamente</option>
-                            </select>
-                        </div>
-
                         <!-- Error Message Container -->
                         <div id="formError" class="hidden p-3.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs sm:text-sm font-medium flex items-center gap-2">
                             <span>⚠️</span>
@@ -493,6 +465,14 @@
                             </button>
                         </div>
                     </div>
+                </div>
+
+                <!-- Navigation Back Button (Placed after the form) -->
+                <div class="text-center mt-8">
+                    <button type="button" id="backToLandingBtn" class="inline-flex items-center gap-2 text-sm font-medium text-brand-plum hover:text-brand-wine transition-colors cursor-pointer px-4 py-2 rounded-full border border-brand-gold/30 bg-white hover:bg-brand-gold-light">
+                        <span>←</span>
+                        <span>Volver a la página principal</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -605,23 +585,17 @@
 
                     const email = document.getElementById('email').value.trim();
                     const phone = document.getElementById('phone').value.trim();
-                    const goal = document.getElementById('goal').value;
 
                     let errors = [];
 
-                    // 1. Requirement check: At least Email or Phone is required
+                    // Requirement check: At least Email or Phone is required
                     if (!email && !phone) {
                         errors.push('Por favor, ingresa al menos tu correo electrónico o tu número telefónico.');
                     }
 
-                    // 2. Email format validation if provided
+                    // Email format validation if provided
                     if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
                         errors.push('Por favor, ingresa un correo electrónico válido.');
-                    }
-
-                    // 3. Goal dropdown validation
-                    if (!goal) {
-                        errors.push('Por favor, selecciona tu objetivo principal.');
                     }
 
                     // If errors present, display first error
