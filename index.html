@@ -281,33 +281,266 @@
             </div>
         </section>
 
-        <!-- Final CTA Registration Intent Section -->
+        <!-- Final CTA Registration Intent & Lead Capture Section -->
         <section id="registro" class="py-20 sm:py-28 bg-brand-cream border-t border-brand-gold/20">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <span class="text-4xl mb-4 block">✨</span>
                 <h2 class="font-serif text-3xl sm:text-5xl font-normal text-brand-night leading-tight">
                     Da el primer paso hacia una relación más <span class="italic text-brand-wine">plena y consciente</span>.
                 </h2>
-                <p class="mt-6 text-base sm:text-lg text-brand-muted max-w-2xl mx-auto">
-                    El cupo es limitado para garantizar una experiencia cercana e íntima. Reserva tu interés para asegurar tu lugar.
+                <p class="mt-4 text-base sm:text-lg text-brand-muted max-w-2xl mx-auto">
+                    Déjanos tus datos para recibir una invitación especial cuando abramos las inscripciones del próximo curso.
                 </p>
 
-                <!-- Action Buttons (As instructed: placing buttons without form yet) -->
-                <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
-                    <button type="button" onclick="alert('¡Gracias por tu interés en Casa Siete! El formulario de inscripción estará disponible próximamente.')" class="w-full sm:w-auto flex-1 inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-gold text-white font-semibold text-base hover:bg-brand-gold-hover transition-all shadow-lg shadow-brand-gold/20 hover:shadow-xl">
-                        Quiero inscribirme ✨
-                    </button>
-                    <button type="button" onclick="alert('Nos pondremos en contacto contigo muy pronto con más detalles del curso.')" class="w-full sm:w-auto flex-1 inline-flex items-center justify-center px-8 py-4 rounded-full bg-white text-brand-night border border-brand-gold/40 font-medium text-base hover:bg-brand-cream-card hover:border-brand-gold transition-all">
-                        Más información
-                    </button>
+                <!-- Form Card Container -->
+                <div class="mt-10 max-w-xl mx-auto bg-brand-cream-card rounded-2xl p-6 sm:p-10 border border-brand-gold/30 shadow-xl text-left relative">
+                    <!-- Form Header Info -->
+                    <div class="mb-6 pb-6 border-b border-brand-gold/20">
+                        <div class="flex items-start gap-3 p-3.5 rounded-xl bg-brand-gold-light/60 border border-brand-gold/20 text-xs sm:text-sm text-brand-plum">
+                            <span class="text-lg leading-none">📩</span>
+                            <span>
+                                Te enviaremos una invitación para cuando comience la próxima edición del curso.
+                                <strong class="font-semibold block mt-1 text-brand-wine">Requerimos al menos tu correo electrónico o tu teléfono (de preferencia ambos).</strong>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Lead Capture Form -->
+                    <form id="leadForm" novalidate class="space-y-5">
+                        <!-- Field 1: Name -->
+                        <div>
+                            <label for="fullName" class="block text-sm font-semibold text-brand-night mb-1.5">
+                                Nombre completo
+                            </label>
+                            <input
+                                type="text"
+                                id="fullName"
+                                name="fullName"
+                                placeholder="Tu nombre y apellido"
+                                class="w-full px-4 py-3 rounded-xl border border-brand-gold/30 bg-white text-brand-night placeholder-brand-muted/50 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all text-sm sm:text-base"
+                            >
+                        </div>
+
+                        <!-- Field 2: Email -->
+                        <div>
+                            <div class="flex justify-between items-center mb-1.5">
+                                <label for="email" class="block text-sm font-semibold text-brand-night">
+                                    Correo electrónico
+                                </label>
+                                <span class="text-xs text-brand-muted italic">El email o teléfono es obligatorio</span>
+                            </div>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="tu@email.com"
+                                class="w-full px-4 py-3 rounded-xl border border-brand-gold/30 bg-white text-brand-night placeholder-brand-muted/50 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all text-sm sm:text-base"
+                            >
+                        </div>
+
+                        <!-- Field 3: Telephone Number with Country Dropdown -->
+                        <div>
+                            <label for="phone" class="block text-sm font-semibold text-brand-night mb-1.5">
+                                Número de teléfono / WhatsApp
+                            </label>
+                            <div class="space-y-2">
+                                <div class="flex flex-col sm:flex-row gap-2">
+                                    <select
+                                        id="countrySelect"
+                                        name="countrySelect"
+                                        class="sm:w-1/2 px-3 py-3 rounded-xl border border-brand-gold/30 bg-white text-brand-night focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all text-xs sm:text-sm"
+                                    >
+                                        <option value="+52">🇲🇽 México (+52)</option>
+                                        <option value="+34">🇪🇸 España (+34)</option>
+                                        <option value="+57">🇨🇴 Colombia (+57)</option>
+                                        <option value="+54">🇦🇷 Argentina (+54)</option>
+                                        <option value="+56">🇨🇱 Chile (+56)</option>
+                                        <option value="+51">🇵🇪 Perú (+51)</option>
+                                        <option value="+58">🇻🇪 Venezuela (+58)</option>
+                                        <option value="+593">🇪🇨 Ecuador (+593)</option>
+                                        <option value="+502">🇬🇹 Guatemala (+502)</option>
+                                        <option value="+53">🇨🇺 Cuba (+53)</option>
+                                        <option value="+1-809">🇩🇴 Rep. Dominicana (+1)</option>
+                                        <option value="+591">🇧🇴 Bolivia (+591)</option>
+                                        <option value="+504">🇭🇳 Honduras (+504)</option>
+                                        <option value="+503">🇸🇻 El Salvador (+503)</option>
+                                        <option value="+505">🇳🇮 Nicaragua (+505)</option>
+                                        <option value="+506">🇨🇷 Costa Rica (+506)</option>
+                                        <option value="+595">🇵🇾 Paraguay (+595)</option>
+                                        <option value="+598">🇺🇾 Uruguay (+598)</option>
+                                        <option value="+507">🇵🇦 Panamá (+507)</option>
+                                        <option value="+1-PR">🇵🇷 Puerto Rico (+1)</option>
+                                        <option value="+240">🇬🇶 Guinea Ecuatorial (+240)</option>
+                                        <option value="+1-US">🇺🇸 Estados Unidos (+1)</option>
+                                        <option value="+1-CA">🇨🇦 Canadá (+1)</option>
+                                        <option value="other">🌐 Otro (especificar código)</option>
+                                    </select>
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        placeholder="Número telefónico"
+                                        class="flex-1 px-4 py-3 rounded-xl border border-brand-gold/30 bg-white text-brand-night placeholder-brand-muted/50 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all text-sm sm:text-base"
+                                    >
+                                </div>
+                                <!-- Manual Country Code Input (Visible when "Other" option is selected) -->
+                                <div id="customCountryContainer" class="hidden">
+                                    <input
+                                        type="text"
+                                        id="customCountryCode"
+                                        name="customCountryCode"
+                                        placeholder="Ingresa la clave de país (ej. +44)"
+                                        class="w-full px-4 py-2.5 rounded-xl border border-brand-gold/30 bg-white text-brand-night placeholder-brand-muted/50 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all text-xs sm:text-sm"
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Field 4: Goal (Objetivo) Select Dropdown -->
+                        <div>
+                            <label for="goal" class="block text-sm font-semibold text-brand-night mb-1.5">
+                                Objetivo principal <span class="text-brand-wine">*</span>
+                            </label>
+                            <select
+                                id="goal"
+                                name="goal"
+                                required
+                                class="w-full px-4 py-3 rounded-xl border border-brand-gold/30 bg-white text-brand-night focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all text-sm sm:text-base"
+                            >
+                                <option value="" disabled selected>Selecciona una opción</option>
+                                <option value="mejorar mi relacion">mejorar mi relacion</option>
+                                <option value="encontrar pareja">encontrar pareja</option>
+                                <option value="sanar una relacion pasada">sanar una relacion pasada</option>
+                                <option value="separarme armoniosamente">separarme armoniosamente</option>
+                            </select>
+                        </div>
+
+                        <!-- Error Message Container -->
+                        <div id="formError" class="hidden p-3.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs sm:text-sm font-medium flex items-center gap-2">
+                            <span>⚠️</span>
+                            <span id="formErrorMessage"></span>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button
+                            type="submit"
+                            class="w-full inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-gold text-white font-semibold text-base hover:bg-brand-gold-hover transition-all shadow-lg shadow-brand-gold/20 hover:shadow-xl cursor-pointer"
+                        >
+                            Quiero recibir mi invitación ✨
+                        </button>
+
+                        <p class="text-center text-xs text-brand-muted pt-1">
+                            🔒 Tus datos están protegidos. Te contactaremos cuando se abra el próximo grupo.
+                        </p>
+                    </form>
+
+                    <!-- Success State View (Hidden initially) -->
+                    <div id="formSuccess" class="hidden text-center py-6 space-y-4">
+                        <div class="w-16 h-16 rounded-full bg-brand-gold-light border border-brand-gold/40 flex items-center justify-center text-3xl mx-auto mb-2">
+                            ✨
+                        </div>
+                        <h3 class="font-serif text-2xl sm:text-3xl font-semibold text-brand-night">
+                            ¡Gracias por registrarte!
+                        </h3>
+                        <p class="text-sm sm:text-base text-brand-muted leading-relaxed max-w-md mx-auto">
+                            Hemos guardado tu información. Te enviaremos una invitación prioritaria con todos los detalles e instrucciones en cuanto comience el próximo curso.
+                        </p>
+                        <div class="pt-4">
+                            <button
+                                type="button"
+                                id="resetFormBtn"
+                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-brand-gold/40 text-brand-night hover:bg-brand-gold-light transition-all text-xs font-medium"
+                            >
+                                Registrar otra persona
+                            </button>
+                        </div>
+                    </div>
                 </div>
-
-                <p class="mt-4 text-xs text-brand-muted">
-                    🔒 Registro de interés sin compromiso. Te notificaremos las fechas exactas de apertura.
-                </p>
             </div>
         </section>
     </main>
+
+    <!-- Form logic script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const countrySelect = document.getElementById('countrySelect');
+            const customCountryContainer = document.getElementById('customCountryContainer');
+            const customCountryCode = document.getElementById('customCountryCode');
+            const leadForm = document.getElementById('leadForm');
+            const formError = document.getElementById('formError');
+            const formErrorMessage = document.getElementById('formErrorMessage');
+            const formSuccess = document.getElementById('formSuccess');
+            const resetFormBtn = document.getElementById('resetFormBtn');
+
+            // Toggle custom country code field when "other" option is selected
+            if (countrySelect && customCountryContainer) {
+                countrySelect.addEventListener('change', function () {
+                    if (this.value === 'other') {
+                        customCountryContainer.classList.remove('hidden');
+                        customCountryCode.focus();
+                    } else {
+                        customCountryContainer.classList.add('hidden');
+                        customCountryCode.value = '';
+                    }
+                });
+            }
+
+            // Form validation and submission handling
+            if (leadForm) {
+                leadForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    formError.classList.add('hidden');
+                    formErrorMessage.textContent = '';
+
+                    const email = document.getElementById('email').value.trim();
+                    const phone = document.getElementById('phone').value.trim();
+                    const goal = document.getElementById('goal').value;
+
+                    let errors = [];
+
+                    // 1. Requirement check: At least Email or Phone is required
+                    if (!email && !phone) {
+                        errors.push('Por favor, ingresa al menos tu correo electrónico o tu número telefónico.');
+                    }
+
+                    // 2. Email format validation if provided
+                    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                        errors.push('Por favor, ingresa un correo electrónico válido.');
+                    }
+
+                    // 3. Goal dropdown validation
+                    if (!goal) {
+                        errors.push('Por favor, selecciona tu objetivo principal.');
+                    }
+
+                    // If errors present, display first error
+                    if (errors.length > 0) {
+                        formErrorMessage.textContent = errors[0];
+                        formError.classList.remove('hidden');
+                        return;
+                    }
+
+                    // Successful submission simulated state
+                    leadForm.classList.add('hidden');
+                    formSuccess.classList.remove('hidden');
+                });
+            }
+
+            // Reset form handler
+            if (resetFormBtn) {
+                resetFormBtn.addEventListener('click', function () {
+                    leadForm.reset();
+                    if (customCountryContainer) {
+                        customCountryContainer.classList.add('hidden');
+                    }
+                    formError.classList.add('hidden');
+                    formSuccess.classList.add('hidden');
+                    leadForm.classList.remove('hidden');
+                });
+            }
+        });
+    </script>
 
     <!-- Footer -->
     <footer class="bg-brand-night text-brand-rose/80 py-12 border-t border-brand-gold/20">
