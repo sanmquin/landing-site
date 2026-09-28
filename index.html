@@ -57,257 +57,574 @@
     <!-- Navigation Header -->
     <header class="sticky top-0 z-50 bg-brand-cream/90 backdrop-blur-md border-b border-brand-gold/20">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-2">
+            <a href="#" id="brandLogoBtn" class="flex items-center gap-2">
                 <span class="text-brand-gold text-2xl">✨</span>
                 <span class="font-serif text-2xl font-bold tracking-wide text-brand-night">Casa Siete</span>
             </a>
-            <div class="flex items-center gap-4">
-                <a href="#audiencia" class="hidden sm:inline-block text-sm font-medium text-brand-night/80 hover:text-brand-wine transition-colors">¿Para quién es?</a>
-                <a href="#contenido" class="hidden sm:inline-block text-sm font-medium text-brand-night/80 hover:text-brand-wine transition-colors">Contenido</a>
-                <a href="#registro" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-medium text-white bg-brand-plum hover:bg-brand-wine transition-all shadow-sm hover:shadow-md">
+            <div id="headerNavLinks" class="flex items-center gap-4">
+                <a href="#audiencia" class="landing-nav-link hidden sm:inline-block text-sm font-medium text-brand-night/80 hover:text-brand-wine transition-colors">¿Para quién es?</a>
+                <a href="#contenido" class="landing-nav-link hidden sm:inline-block text-sm font-medium text-brand-night/80 hover:text-brand-wine transition-colors">Contenido</a>
+                <button type="button" class="cta-register-btn inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-medium text-white bg-brand-plum hover:bg-brand-wine transition-all shadow-sm hover:shadow-md cursor-pointer">
                     Inscribirme
-                </a>
+                </button>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="relative overflow-hidden py-16 lg:py-24 border-b border-brand-gold/10">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <!-- Badge for Instagram Visitors -->
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-gold-light border border-brand-gold/30 text-brand-plum text-xs sm:text-sm font-medium mb-6">
-                    <span>🔮</span>
-                    <span>Curso de Pareja basado en Astrología</span>
-                </div>
-
-                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal leading-tight sm:leading-tight text-brand-night max-w-4xl mx-auto">
-                    Tu relación de pareja es tu espejo de mayor <span class="italic text-brand-wine">crecimiento</span>.
-                </h1>
-
-                <p class="mt-6 text-lg sm:text-xl text-brand-muted font-normal max-w-2xl mx-auto leading-relaxed">
-                    En esta vida todos venimos a compartir y ser felices al lado de la persona que amamos. Aprende a comprender la dinámica de tu relación a través del mapa cósmico.
-                </p>
-
-                <!-- Action Buttons (No forms yet, as instructed) -->
-                <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#registro" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-gold text-white font-semibold text-base hover:bg-brand-gold-hover transition-all shadow-lg shadow-brand-gold/20 hover:shadow-xl">
-                        Quiero unirme al curso ✨
-                    </a>
-                    <a href="#filosofia" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full bg-white text-brand-night border border-brand-gold/40 font-medium text-base hover:bg-brand-cream-card hover:border-brand-gold transition-all">
-                        Descubrir más
-                    </a>
-                </div>
-
-                <!-- Course Quick Highlights -->
-                <div class="mt-12 pt-8 border-t border-brand-gold/20 max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
-                    <div class="p-3">
-                        <span class="block text-2xl font-serif font-semibold text-brand-wine">4 Semanas</span>
-                        <span class="text-xs sm:text-sm text-brand-muted">Duración del programa</span>
+        <!-- Landing View Container -->
+        <div id="landingView">
+            <!-- Hero Section -->
+            <section class="relative overflow-hidden py-16 lg:py-24 border-b border-brand-gold/10">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <!-- Badge for Instagram Visitors -->
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-gold-light border border-brand-gold/30 text-brand-plum text-xs sm:text-sm font-medium mb-6">
+                        <span>🔮</span>
+                        <span>Curso de Pareja basado en Astrología</span>
                     </div>
-                    <div class="p-3">
-                        <span class="block text-2xl font-serif font-semibold text-brand-wine">Online & Guiado</span>
-                        <span class="text-xs sm:text-sm text-brand-muted">Acompañamiento personalizado</span>
-                    </div>
-                    <div class="p-3 col-span-2 md:col-span-1">
-                        <span class="block text-2xl font-serif font-semibold text-brand-wine">Lindas Sorpresas</span>
-                        <span class="text-xs sm:text-sm text-brand-muted">Durante el camino</span>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Philosophy / Mirror Concept Section -->
-        <section id="filosofia" class="py-16 sm:py-20 bg-brand-cream-card border-b border-brand-gold/10">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <span class="text-brand-gold text-3xl">🌙</span>
-                <h2 class="mt-3 font-serif text-3xl sm:text-4xl text-brand-night">
-                    El Espejo de las Relaciones
-                </h2>
-                <div class="mt-6 space-y-4 text-base sm:text-lg text-brand-night/80 leading-relaxed max-w-3xl mx-auto">
-                    <p>
-                        Bienvenida a <strong class="font-semibold text-brand-plum">Casa Siete</strong>. En la astrología, la Casa VII representa los vínculos comprometidos, el espejo donde nos miramos a través del otro.
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal leading-tight sm:leading-tight text-brand-night max-w-4xl mx-auto">
+                        Tu relación de pareja es tu espejo de mayor <span class="italic text-brand-wine">crecimiento</span>.
+                    </h1>
+
+                    <p class="mt-6 text-lg sm:text-xl text-brand-muted font-normal max-w-2xl mx-auto leading-relaxed">
+                        En esta vida todos venimos a compartir y ser felices al lado de la persona que amamos. Aprende a comprender la dinámica de tu relación a través del mapa cósmico.
                     </p>
-                    <p>
-                        Nuestra pareja no llega por casualidad: es la proyección de nuestras necesidades emocionales, aprendizajes kármicos y forma más profunda de entregar amor. Comprender este lenguaje te permitirá transformar conflictos en puentes de intimidad.
-                    </p>
-                </div>
-            </div>
-        </section>
 
-        <!-- Target Audience Section -->
-        <section id="audiencia" class="py-16 sm:py-24">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto">
-                    <span class="text-brand-wine text-xs uppercase tracking-widest font-semibold">¿Para quién es este curso?</span>
-                    <h2 class="mt-2 font-serif text-3xl sm:text-4xl text-brand-night">
-                        Un espacio diseñado para ti, sin importar en qué etapa te encuentres
+                    <!-- Action Buttons -->
+                    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <button type="button" class="cta-register-btn w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-gold text-white font-semibold text-base hover:bg-brand-gold-hover transition-all shadow-lg shadow-brand-gold/20 hover:shadow-xl cursor-pointer">
+                            Quiero unirme al curso ✨
+                        </button>
+                        <a href="#filosofia" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full bg-white text-brand-night border border-brand-gold/40 font-medium text-base hover:bg-brand-cream-card hover:border-brand-gold transition-all">
+                            Descubrir más
+                        </a>
+                    </div>
+
+                    <!-- Course Quick Highlights -->
+                    <div class="mt-12 pt-8 border-t border-brand-gold/20 max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+                        <div class="p-3">
+                            <span class="block text-2xl font-serif font-semibold text-brand-wine">4 Semanas</span>
+                            <span class="text-xs sm:text-sm text-brand-muted">Duración del programa</span>
+                        </div>
+                        <div class="p-3">
+                            <span class="block text-2xl font-serif font-semibold text-brand-wine">Online & Guiado</span>
+                            <span class="text-xs sm:text-sm text-brand-muted">Acompañamiento personalizado</span>
+                        </div>
+                        <div class="p-3 col-span-2 md:col-span-1">
+                            <span class="block text-2xl font-serif font-semibold text-brand-wine">Lindas Sorpresas</span>
+                            <span class="text-xs sm:text-sm text-brand-muted">Durante el camino</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Philosophy / Mirror Concept Section -->
+            <section id="filosofia" class="py-16 sm:py-20 bg-brand-cream-card border-b border-brand-gold/10">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <span class="text-brand-gold text-3xl">🌙</span>
+                    <h2 class="mt-3 font-serif text-3xl sm:text-4xl text-brand-night">
+                        El Espejo de las Relaciones
                     </h2>
-                    <p class="mt-4 text-base sm:text-lg text-brand-muted">
-                        Creemos que la astrología brinda respuestas valiosas en diferentes momentos de tu camino afectivo.
-                    </p>
-                </div>
-
-                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Option 1: Current Relationship -->
-                    <div class="bg-brand-cream-card rounded-2xl p-8 border border-brand-gold/20 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-                        <div>
-                            <div class="w-12 h-12 rounded-xl bg-brand-gold-light flex items-center justify-center text-2xl mb-6">
-                                💖
-                            </div>
-                            <h3 class="font-serif text-xl font-semibold text-brand-night mb-3">
-                                Si deseas mejorar tu relación actual
-                            </h3>
-                            <p class="text-brand-muted text-sm leading-relaxed">
-                                Diseñado especialmente para profundizar la conexión, entender las reacciones automáticas de ambos y fortalecer los cimientos diarios de su amor.
-                            </p>
-                        </div>
-                        <div class="mt-6 pt-4 border-t border-brand-gold/10 text-xs font-medium text-brand-wine">
-                            ✓ Ideal para parejas en constante evolución
-                        </div>
-                    </div>
-
-                    <!-- Option 2: Looking for a partner -->
-                    <div class="bg-brand-cream-card rounded-2xl p-8 border border-brand-gold/20 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-                        <div>
-                            <div class="w-12 h-12 rounded-xl bg-brand-gold-light flex items-center justify-center text-2xl mb-6">
-                                ✨
-                            </div>
-                            <h3 class="font-serif text-xl font-semibold text-brand-night mb-3">
-                                Si estás buscando pareja
-                            </h3>
-                            <p class="text-brand-muted text-sm leading-relaxed">
-                                Comprende el patrón de pareja que tu alma busca atraer, sana heridas pasadas y prepárate emocionalmente para construir una relación consciente.
-                            </p>
-                        </div>
-                        <div class="mt-6 pt-4 border-t border-brand-gold/10 text-xs font-medium text-brand-wine">
-                            ✓ Ideal para atraer amor sano y duradero
-                        </div>
-                    </div>
-
-                    <!-- Option 3: Harmonious Separation -->
-                    <div class="bg-brand-cream-card rounded-2xl p-8 border border-brand-gold/20 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-                        <div>
-                            <div class="w-12 h-12 rounded-xl bg-brand-gold-light flex items-center justify-center text-2xl mb-6">
-                                🕊️
-                            </div>
-                            <h3 class="font-serif text-xl font-semibold text-brand-night mb-3">
-                                Si consideras separarte armoniosamente
-                            </h3>
-                            <p class="text-brand-muted text-sm leading-relaxed">
-                                Si estás en una transición o considerando separarte, este curso te dará claridad y entendimiento para cerrar ciclos con gratitud y paz.
-                            </p>
-                        </div>
-                        <div class="mt-6 pt-4 border-t border-brand-gold/10 text-xs font-medium text-brand-wine">
-                            ✓ Transición amorosa y consciente
-                        </div>
+                    <div class="mt-6 space-y-4 text-base sm:text-lg text-brand-night/80 leading-relaxed max-w-3xl mx-auto">
+                        <p>
+                            Bienvenida a <strong class="font-semibold text-brand-plum">Casa Siete</strong>. En la astrología, la Casa VII representa los vínculos comprometidos, el espejo donde nos miramos a través del otro.
+                        </p>
+                        <p>
+                            Nuestra pareja no llega por casualidad: es la proyección de nuestras necesidades emocionales, aprendizajes kármicos y forma más profunda de entregar amor. Comprender este lenguaje te permitirá transformar conflictos en puentes de intimidad.
+                        </p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Course Content / Modules Section -->
-        <section id="contenido" class="py-16 sm:py-24 bg-brand-plum text-white relative overflow-hidden">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="text-center max-w-3xl mx-auto">
-                    <span class="text-brand-rose text-xs uppercase tracking-widest font-semibold">Programa de 4 Semanas</span>
-                    <h2 class="mt-2 font-serif text-3xl sm:text-4xl text-brand-gold-light">
-                        El Viaje de Transformación
+            <!-- Target Audience Section -->
+            <section id="audiencia" class="py-16 sm:py-24">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto">
+                        <span class="text-brand-wine text-xs uppercase tracking-widest font-semibold">¿Para quién es este curso?</span>
+                        <h2 class="mt-2 font-serif text-3xl sm:text-4xl text-brand-night">
+                            Un espacio diseñado para ti, sin importar en qué etapa te encuentres
+                        </h2>
+                        <p class="mt-4 text-base sm:text-lg text-brand-muted">
+                            Creemos que la astrología brinda respuestas valiosas en diferentes momentos de tu camino afectivo.
+                        </p>
+                    </div>
+
+                    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Option 1: Current Relationship -->
+                        <div class="bg-brand-cream-card rounded-2xl p-8 border border-brand-gold/20 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                            <div>
+                                <div class="w-12 h-12 rounded-xl bg-brand-gold-light flex items-center justify-center text-2xl mb-6">
+                                    💖
+                                </div>
+                                <h3 class="font-serif text-xl font-semibold text-brand-night mb-3">
+                                    Si deseas mejorar tu relación actual
+                                </h3>
+                                <p class="text-brand-muted text-sm leading-relaxed">
+                                    Diseñado especialmente para profundizar la conexión, entender las reacciones automáticas de ambos y fortalecer los cimientos diarios de su amor.
+                                </p>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-brand-gold/10 text-xs font-medium text-brand-wine">
+                                ✓ Ideal para parejas en constante evolución
+                            </div>
+                        </div>
+
+                        <!-- Option 2: Looking for a partner -->
+                        <div class="bg-brand-cream-card rounded-2xl p-8 border border-brand-gold/20 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                            <div>
+                                <div class="w-12 h-12 rounded-xl bg-brand-gold-light flex items-center justify-center text-2xl mb-6">
+                                    ✨
+                                </div>
+                                <h3 class="font-serif text-xl font-semibold text-brand-night mb-3">
+                                    Si estás buscando pareja
+                                </h3>
+                                <p class="text-brand-muted text-sm leading-relaxed">
+                                    Comprende el patrón de pareja que tu alma busca atraer, sana heridas pasadas y prepárate emocionalmente para construir una relación consciente.
+                                </p>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-brand-gold/10 text-xs font-medium text-brand-wine">
+                                ✓ Ideal para atraer amor sano y duradero
+                            </div>
+                        </div>
+
+                        <!-- Option 3: Harmonious Separation -->
+                        <div class="bg-brand-cream-card rounded-2xl p-8 border border-brand-gold/20 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                            <div>
+                                <div class="w-12 h-12 rounded-xl bg-brand-gold-light flex items-center justify-center text-2xl mb-6">
+                                    🕊️
+                                </div>
+                                <h3 class="font-serif text-xl font-semibold text-brand-night mb-3">
+                                    Si consideras separarte armoniosamente
+                                </h3>
+                                <p class="text-brand-muted text-sm leading-relaxed">
+                                    Si estás en una transición o considerando separarte, este curso te dará claridad y entendimiento para cerrar ciclos con gratitud y paz.
+                                </p>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-brand-gold/10 text-xs font-medium text-brand-wine">
+                                ✓ Transición amorosa y consciente
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Course Content / Modules Section -->
+            <section id="contenido" class="py-16 sm:py-24 bg-brand-plum text-white relative overflow-hidden">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="text-center max-w-3xl mx-auto">
+                        <span class="text-brand-rose text-xs uppercase tracking-widest font-semibold">Programa de 4 Semanas</span>
+                        <h2 class="mt-2 font-serif text-3xl sm:text-4xl text-brand-gold-light">
+                            El Viaje de Transformación
+                        </h2>
+                        <p class="mt-4 text-base sm:text-lg text-brand-rose/90">
+                            Un recorrido paso a paso explorando los pilares astrológicos de tus relaciones.
+                        </p>
+                    </div>
+
+                    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Week 1: La Luna -->
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all backdrop-blur-sm">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold-light border border-brand-gold/30">Semana 1 & 2</span>
+                                <span class="text-3xl">🌕</span>
+                            </div>
+                            <h3 class="font-serif text-2xl text-white font-medium mb-3">
+                                Las Emociones & Tu Luna
+                            </h3>
+                            <p class="text-brand-rose/80 text-sm leading-relaxed">
+                                Iniciaremos con las emociones y tu Luna, el factor que más influye en el día a día de tu relación. Entenderás tus necesidades emocionales profundas para evitar reaccionar negativamente y evitar hacer más graves los problemas cotidianos.
+                            </p>
+                        </div>
+
+                        <!-- Week 2: Karma & Descendente -->
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all backdrop-blur-sm">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold-light border border-brand-gold/30">Semana 3</span>
+                                <span class="text-3xl">⚖️</span>
+                            </div>
+                            <h3 class="font-serif text-2xl text-white font-medium mb-3">
+                                El Karma & Tu Descendente
+                            </h3>
+                            <p class="text-brand-rose/80 text-sm leading-relaxed">
+                                Pasaremos al karma, enfocándonos en tu Descendente: aquello que tu relación de pareja viene a enseñarte. Descubrirás las características que te toca cultivar para disfrutar de una relación sólida y duradera.
+                            </p>
+                        </div>
+
+                        <!-- Week 3: Venus -->
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all backdrop-blur-sm">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold-light border border-brand-gold/30">Semana 4</span>
+                                <span class="text-3xl">♀️</span>
+                            </div>
+                            <h3 class="font-serif text-2xl text-white font-medium mb-3">
+                                Venus & Tu Forma de Amar
+                            </h3>
+                            <p class="text-brand-rose/80 text-sm leading-relaxed">
+                                Exploraremos a Venus: tu lenguaje único para dar y recibir amor, además de los valores sobre los cuales tu relación necesita sostenerse para <strong class="text-brand-gold-light font-semibold">TRIUNFAR</strong> sobre los desafíos cotidianos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Surprises Banner -->
+                    <div class="mt-12 bg-gradient-to-r from-brand-wine/80 to-brand-plum rounded-2xl p-6 sm:p-8 border border-brand-gold/30 text-center flex flex-col sm:flex-row items-center justify-between gap-6">
+                        <div class="text-left">
+                            <div class="flex items-center gap-2 text-brand-gold-light font-serif text-xl font-semibold mb-1">
+                                <span>🎁</span>
+                                <span>Lindas sorpresas durante el camino</span>
+                            </div>
+                            <p class="text-brand-rose/80 text-sm">
+                                Además del contenido del curso, recibirás dinámicas especiales, recursos descargables y experiencias preparadas para enriquecer tu viaje.
+                            </p>
+                        </div>
+                        <button type="button" class="cta-register-btn shrink-0 px-6 py-3 rounded-full bg-brand-gold text-white font-medium text-sm hover:bg-brand-gold-hover transition-all shadow-md cursor-pointer">
+                            Reservar mi lugar
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Final CTA Section -->
+            <section class="py-20 sm:py-28 bg-brand-cream border-t border-brand-gold/20 text-center">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <span class="text-4xl mb-4 block">✨</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-normal text-brand-night leading-tight">
+                        Da el primer paso hacia una relación más <span class="italic text-brand-wine">plena y consciente</span>.
                     </h2>
-                    <p class="mt-4 text-base sm:text-lg text-brand-rose/90">
-                        Un recorrido paso a paso explorando los pilares astrológicos de tus relaciones.
+                    <p class="mt-4 text-base sm:text-lg text-brand-muted max-w-2xl mx-auto">
+                        El cupo es limitado para garantizar una experiencia cercana e íntima. Reserva tu lugar y recibe tu invitación prioritaria.
+                    </p>
+
+                    <div class="mt-10 flex justify-center">
+                        <button type="button" class="cta-register-btn inline-flex items-center justify-center px-9 py-4 rounded-full bg-brand-gold text-white font-semibold text-base sm:text-lg hover:bg-brand-gold-hover transition-all shadow-lg shadow-brand-gold/20 hover:shadow-xl cursor-pointer">
+                            Inscribirme / Recibir invitación ✨
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Dedicated Single-Page Form View Container (Hidden initially) -->
+        <div id="formView" class="hidden min-h-[calc(100vh-80px)] py-12 sm:py-16 bg-brand-cream">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Page Header -->
+                <div class="text-center mb-10">
+                    <span class="text-3xl mb-2 block">✨</span>
+                    <h1 class="font-serif text-3xl sm:text-4xl font-normal text-brand-night">
+                        Registro para el próximo curso <span class="italic text-brand-wine">Casa Siete</span>
+                    </h1>
+                    <p class="mt-3 text-base text-brand-muted max-w-xl mx-auto">
+                        Déjanos tus datos y te enviaremos una invitación especial con las fechas e instrucciones en cuanto abramos el próximo grupo.
                     </p>
                 </div>
 
-                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Week 1: La Luna -->
-                    <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all backdrop-blur-sm">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold-light border border-brand-gold/30">Semana 1 & 2</span>
-                            <span class="text-3xl">🌕</span>
+                <!-- Form Card Container -->
+                <div class="bg-brand-cream-card rounded-2xl p-6 sm:p-10 border border-brand-gold/30 shadow-xl relative max-w-xl mx-auto">
+                    <!-- Form Header Info -->
+                    <div class="mb-6 pb-6 border-b border-brand-gold/20">
+                        <div class="flex items-start gap-3 p-3.5 rounded-xl bg-brand-gold-light/60 border border-brand-gold/20 text-xs sm:text-sm text-brand-plum">
+                            <span class="text-lg leading-none">📩</span>
+                            <span>
+                                Te enviaremos una invitación para cuando comience la próxima edición del curso.
+                                <strong class="font-semibold block mt-1 text-brand-wine">Requerimos al menos tu correo electrónico o tu teléfono (de preferencia ambos).</strong>
+                            </span>
                         </div>
-                        <h3 class="font-serif text-2xl text-white font-medium mb-3">
-                            Las Emociones & Tu Luna
-                        </h3>
-                        <p class="text-brand-rose/80 text-sm leading-relaxed">
-                            Iniciaremos con las emociones y tu Luna, el factor que más influye en el día a día de tu relación. Entenderás tus necesidades emocionales profundas para evitar reaccionar negativamente y evitar hacer más graves los problemas cotidianos.
-                        </p>
                     </div>
 
-                    <!-- Week 2: Karma & Descendente -->
-                    <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all backdrop-blur-sm">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold-light border border-brand-gold/30">Semana 3</span>
-                            <span class="text-3xl">⚖️</span>
+                    <!-- Lead Capture Form -->
+                    <form id="leadForm" novalidate class="space-y-5">
+                        <!-- Field 1: Name -->
+                        <div>
+                            <label for="fullName" class="block text-sm font-semibold text-brand-night mb-1.5">
+                                Nombre completo
+                            </label>
+                            <input
+                                type="text"
+                                id="fullName"
+                                name="fullName"
+                                placeholder="Tu nombre y apellido"
+                                class="w-full px-4 py-3 rounded-xl border border-brand-gold/30 bg-white text-brand-night placeholder-brand-muted/50 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all text-sm sm:text-base"
+                            >
                         </div>
-                        <h3 class="font-serif text-2xl text-white font-medium mb-3">
-                            El Karma & Tu Descendente
-                        </h3>
-                        <p class="text-brand-rose/80 text-sm leading-relaxed">
-                            Pasaremos al karma, enfocándonos en tu Descendente: aquello que tu relación de pareja viene a enseñarte. Descubrirás las características que te toca cultivar para disfrutar de una relación sólida y duradera.
-                        </p>
-                    </div>
 
-                    <!-- Week 3: Venus -->
-                    <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all backdrop-blur-sm">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold-light border border-brand-gold/30">Semana 4</span>
-                            <span class="text-3xl">♀️</span>
+                        <!-- Field 2: Email -->
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-brand-night mb-1.5">
+                                Correo electrónico
+                            </label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="tu@email.com"
+                                class="w-full px-4 py-3 rounded-xl border border-brand-gold/30 bg-white text-brand-night placeholder-brand-muted/50 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all text-sm sm:text-base"
+                            >
                         </div>
-                        <h3 class="font-serif text-2xl text-white font-medium mb-3">
-                            Venus & Tu Forma de Amar
-                        </h3>
-                        <p class="text-brand-rose/80 text-sm leading-relaxed">
-                            Exploraremos a Venus: tu lenguaje único para dar y recibir amor, además de los valores sobre los cuales tu relación necesita sostenerse para <strong class="text-brand-gold-light font-semibold">TRIUNFAR</strong> sobre los desafíos cotidianos.
+
+                        <!-- Field 3: Telephone Number with Country Dropdown -->
+                        <div>
+                            <label for="phone" class="block text-sm font-semibold text-brand-night mb-1.5">
+                                Número de teléfono / WhatsApp
+                            </label>
+                            <div class="space-y-2">
+                                <div class="flex flex-col sm:flex-row gap-2">
+                                    <select
+                                        id="countrySelect"
+                                        name="countrySelect"
+                                        class="sm:w-1/2 px-3 py-3 rounded-xl border border-brand-gold/30 bg-white text-brand-night focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all text-xs sm:text-sm"
+                                    >
+                                        <option value="+52">🇲🇽 México (+52)</option>
+                                        <option value="+34">🇪🇸 España (+34)</option>
+                                        <option value="+57">🇨🇴 Colombia (+57)</option>
+                                        <option value="+54">🇦🇷 Argentina (+54)</option>
+                                        <option value="+56">🇨🇱 Chile (+56)</option>
+                                        <option value="+51">🇵🇪 Perú (+51)</option>
+                                        <option value="+58">🇻🇪 Venezuela (+58)</option>
+                                        <option value="+593">🇪🇨 Ecuador (+593)</option>
+                                        <option value="+502">🇬🇹 Guatemala (+502)</option>
+                                        <option value="+53">🇨🇺 Cuba (+53)</option>
+                                        <option value="+1-809">🇩🇴 Rep. Dominicana (+1)</option>
+                                        <option value="+591">🇧🇴 Bolivia (+591)</option>
+                                        <option value="+504">🇭🇳 Honduras (+504)</option>
+                                        <option value="+503">🇸🇻 El Salvador (+503)</option>
+                                        <option value="+505">🇳🇮 Nicaragua (+505)</option>
+                                        <option value="+506">🇨🇷 Costa Rica (+506)</option>
+                                        <option value="+595">🇵🇾 Paraguay (+595)</option>
+                                        <option value="+598">🇺🇾 Uruguay (+598)</option>
+                                        <option value="+507">🇵🇦 Panamá (+507)</option>
+                                        <option value="+1-PR">🇵🇷 Puerto Rico (+1)</option>
+                                        <option value="+240">🇬🇶 Guinea Ecuatorial (+240)</option>
+                                        <option value="+1-US">🇺🇸 Estados Unidos (+1)</option>
+                                        <option value="+1-CA">🇨🇦 Canadá (+1)</option>
+                                        <option value="other">🌐 Otro (especificar código)</option>
+                                    </select>
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        placeholder="Número telefónico"
+                                        class="flex-1 px-4 py-3 rounded-xl border border-brand-gold/30 bg-white text-brand-night placeholder-brand-muted/50 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all text-sm sm:text-base"
+                                    >
+                                </div>
+                                <!-- Manual Country Code Input (Visible when "Other" option is selected) -->
+                                <div id="customCountryContainer" class="hidden">
+                                    <input
+                                        type="text"
+                                        id="customCountryCode"
+                                        name="customCountryCode"
+                                        placeholder="Ingresa la clave de país (ej. +44)"
+                                        class="w-full px-4 py-2.5 rounded-xl border border-brand-gold/30 bg-white text-brand-night placeholder-brand-muted/50 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all text-xs sm:text-sm"
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Error Message Container -->
+                        <div id="formError" class="hidden p-3.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs sm:text-sm font-medium flex items-center gap-2">
+                            <span>⚠️</span>
+                            <span id="formErrorMessage"></span>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button
+                            type="submit"
+                            class="w-full inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-gold text-white font-semibold text-base hover:bg-brand-gold-hover transition-all shadow-lg shadow-brand-gold/20 hover:shadow-xl cursor-pointer"
+                        >
+                            Quiero recibir mi invitación ✨
+                        </button>
+
+                        <p class="text-center text-xs text-brand-muted pt-1">
+                            🔒 Tus datos están protegidos. Te contactaremos cuando se abra el próximo grupo.
                         </p>
+                    </form>
+
+                    <!-- Success State View (Hidden initially) -->
+                    <div id="formSuccess" class="hidden text-center py-6 space-y-4">
+                        <div class="w-16 h-16 rounded-full bg-brand-gold-light border border-brand-gold/40 flex items-center justify-center text-3xl mx-auto mb-2">
+                            ✨
+                        </div>
+                        <h3 class="font-serif text-2xl sm:text-3xl font-semibold text-brand-night">
+                            ¡Gracias por registrarte!
+                        </h3>
+                        <p class="text-sm sm:text-base text-brand-muted leading-relaxed max-w-md mx-auto">
+                            Hemos guardado tu información. Te enviaremos una invitación prioritaria con todos los detalles e instrucciones en cuanto comience el próximo curso.
+                        </p>
+                        <div class="pt-4 flex flex-col sm:flex-row gap-3 justify-center">
+                            <button
+                                type="button"
+                                id="resetFormBtn"
+                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-brand-gold/40 text-brand-night hover:bg-brand-gold-light transition-all text-xs font-medium cursor-pointer"
+                            >
+                                Registrar otra persona
+                            </button>
+                            <button
+                                type="button"
+                                id="backHomeFromSuccessBtn"
+                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-brand-plum text-white hover:bg-brand-wine transition-all text-xs font-medium cursor-pointer"
+                            >
+                                Volver al inicio
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Surprises Banner -->
-                <div class="mt-12 bg-gradient-to-r from-brand-wine/80 to-brand-plum rounded-2xl p-6 sm:p-8 border border-brand-gold/30 text-center flex flex-col sm:flex-row items-center justify-between gap-6">
-                    <div class="text-left">
-                        <div class="flex items-center gap-2 text-brand-gold-light font-serif text-xl font-semibold mb-1">
-                            <span>🎁</span>
-                            <span>Lindas sorpresas durante el camino</span>
-                        </div>
-                        <p class="text-brand-rose/80 text-sm">
-                            Además del contenido del curso, recibirás dinámicas especiales, recursos descargables y experiencias preparadas para enriquecer tu viaje.
-                        </p>
-                    </div>
-                    <a href="#registro" class="shrink-0 px-6 py-3 rounded-full bg-brand-gold text-white font-medium text-sm hover:bg-brand-gold-hover transition-all shadow-md">
-                        Reservar mi lugar
-                    </a>
+                <!-- Navigation Back Button (Placed after the form) -->
+                <div class="text-center mt-8">
+                    <button type="button" id="backToLandingBtn" class="inline-flex items-center gap-2 text-sm font-medium text-brand-plum hover:text-brand-wine transition-colors cursor-pointer px-4 py-2 rounded-full border border-brand-gold/30 bg-white hover:bg-brand-gold-light">
+                        <span>←</span>
+                        <span>Volver a la página principal</span>
+                    </button>
                 </div>
             </div>
-        </section>
-
-        <!-- Final CTA Registration Intent Section -->
-        <section id="registro" class="py-20 sm:py-28 bg-brand-cream border-t border-brand-gold/20">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <span class="text-4xl mb-4 block">✨</span>
-                <h2 class="font-serif text-3xl sm:text-5xl font-normal text-brand-night leading-tight">
-                    Da el primer paso hacia una relación más <span class="italic text-brand-wine">plena y consciente</span>.
-                </h2>
-                <p class="mt-6 text-base sm:text-lg text-brand-muted max-w-2xl mx-auto">
-                    El cupo es limitado para garantizar una experiencia cercana e íntima. Reserva tu interés para asegurar tu lugar.
-                </p>
-
-                <!-- Action Buttons (As instructed: placing buttons without form yet) -->
-                <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
-                    <button type="button" onclick="alert('¡Gracias por tu interés en Casa Siete! El formulario de inscripción estará disponible próximamente.')" class="w-full sm:w-auto flex-1 inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-gold text-white font-semibold text-base hover:bg-brand-gold-hover transition-all shadow-lg shadow-brand-gold/20 hover:shadow-xl">
-                        Quiero inscribirme ✨
-                    </button>
-                    <button type="button" onclick="alert('Nos pondremos en contacto contigo muy pronto con más detalles del curso.')" class="w-full sm:w-auto flex-1 inline-flex items-center justify-center px-8 py-4 rounded-full bg-white text-brand-night border border-brand-gold/40 font-medium text-base hover:bg-brand-cream-card hover:border-brand-gold transition-all">
-                        Más información
-                    </button>
-                </div>
-
-                <p class="mt-4 text-xs text-brand-muted">
-                    🔒 Registro de interés sin compromiso. Te notificaremos las fechas exactas de apertura.
-                </p>
-            </div>
-        </section>
+        </div>
     </main>
+
+    <!-- Form & View Navigation script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const landingView = document.getElementById('landingView');
+            const formView = document.getElementById('formView');
+            const headerNavLinks = document.getElementById('headerNavLinks');
+            const brandLogoBtn = document.getElementById('brandLogoBtn');
+            const backToLandingBtn = document.getElementById('backToLandingBtn');
+            const backHomeFromSuccessBtn = document.getElementById('backHomeFromSuccessBtn');
+            const ctaRegisterBtns = document.querySelectorAll('.cta-register-btn');
+
+            const countrySelect = document.getElementById('countrySelect');
+            const customCountryContainer = document.getElementById('customCountryContainer');
+            const customCountryCode = document.getElementById('customCountryCode');
+            const leadForm = document.getElementById('leadForm');
+            const formError = document.getElementById('formError');
+            const formErrorMessage = document.getElementById('formErrorMessage');
+            const formSuccess = document.getElementById('formSuccess');
+            const resetFormBtn = document.getElementById('resetFormBtn');
+
+            // View Switching functions
+            function showFormView(updateHash = true) {
+                landingView.classList.add('hidden');
+                formView.classList.remove('hidden');
+                headerNavLinks.classList.add('hidden');
+                window.scrollTo({ top: 0, behavior: 'instant' });
+                if (updateHash && window.location.hash !== '#registro') {
+                    history.pushState({ view: 'form' }, '', '#registro');
+                }
+            }
+
+            function showLandingView(updateHash = true) {
+                formView.classList.add('hidden');
+                landingView.classList.remove('hidden');
+                headerNavLinks.classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'instant' });
+                if (updateHash && window.location.hash === '#registro') {
+                    history.pushState({ view: 'landing' }, '', window.location.pathname);
+                }
+            }
+
+            // Register CTA click events to show dedicated form view
+            ctaRegisterBtns.forEach(btn => {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    showFormView();
+                });
+            });
+
+            // Back button click events
+            if (backToLandingBtn) {
+                backToLandingBtn.addEventListener('click', function () {
+                    showLandingView();
+                });
+            }
+
+            if (backHomeFromSuccessBtn) {
+                backHomeFromSuccessBtn.addEventListener('click', function () {
+                    showLandingView();
+                });
+            }
+
+            if (brandLogoBtn) {
+                brandLogoBtn.addEventListener('click', function (e) {
+                    if (!formView.classList.contains('hidden')) {
+                        e.preventDefault();
+                        showLandingView();
+                    }
+                });
+            }
+
+            // Handle browser Back / Forward buttons & direct link with #registro
+            window.addEventListener('popstate', function () {
+                if (window.location.hash === '#registro') {
+                    showFormView(false);
+                } else {
+                    showLandingView(false);
+                }
+            });
+
+            if (window.location.hash === '#registro') {
+                showFormView(false);
+            }
+
+            // Toggle custom country code field when "other" option is selected
+            if (countrySelect && customCountryContainer) {
+                countrySelect.addEventListener('change', function () {
+                    if (this.value === 'other') {
+                        customCountryContainer.classList.remove('hidden');
+                        customCountryCode.focus();
+                    } else {
+                        customCountryContainer.classList.add('hidden');
+                        customCountryCode.value = '';
+                    }
+                });
+            }
+
+            // Form validation and submission handling
+            if (leadForm) {
+                leadForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    formError.classList.add('hidden');
+                    formErrorMessage.textContent = '';
+
+                    const email = document.getElementById('email').value.trim();
+                    const phone = document.getElementById('phone').value.trim();
+
+                    let errors = [];
+
+                    // Requirement check: At least Email or Phone is required
+                    if (!email && !phone) {
+                        errors.push('Por favor, ingresa al menos tu correo electrónico o tu número telefónico.');
+                    }
+
+                    // Email format validation if provided
+                    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                        errors.push('Por favor, ingresa un correo electrónico válido.');
+                    }
+
+                    // If errors present, display first error
+                    if (errors.length > 0) {
+                        formErrorMessage.textContent = errors[0];
+                        formError.classList.remove('hidden');
+                        return;
+                    }
+
+                    // Successful submission simulated state
+                    leadForm.classList.add('hidden');
+                    formSuccess.classList.remove('hidden');
+                });
+            }
+
+            // Reset form handler
+            if (resetFormBtn) {
+                resetFormBtn.addEventListener('click', function () {
+                    leadForm.reset();
+                    if (customCountryContainer) {
+                        customCountryContainer.classList.add('hidden');
+                    }
+                    formError.classList.add('hidden');
+                    formSuccess.classList.add('hidden');
+                    leadForm.classList.remove('hidden');
+                });
+            }
+        });
+    </script>
 
     <!-- Footer -->
     <footer class="bg-brand-night text-brand-rose/80 py-12 border-t border-brand-gold/20">
@@ -325,7 +642,6 @@
                     <span>📱</span> Instagram
                 </a>
                 <a href="#contenido" class="hover:text-brand-gold transition-colors">Contenido</a>
-                <a href="#registro" class="hover:text-brand-gold transition-colors">Inscripción</a>
             </div>
         </div>
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-6 border-t border-white/10 text-center text-xs text-brand-rose/40">
