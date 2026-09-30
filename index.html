@@ -575,16 +575,19 @@
                 });
             }
 
-            // Form validation and submission handling
+            // Form validation and async API submission handling
             if (leadForm) {
-                leadForm.addEventListener('submit', function (e) {
+                leadForm.addEventListener('submit', async function (e) {
                     e.preventDefault();
 
                     formError.classList.add('hidden');
                     formErrorMessage.textContent = '';
 
-                    const email = document.getElementById('email').value.trim();
-                    const phone = document.getElementById('phone').value.trim();
+                    const fullName = document.getElementById('fullName') ? document.getElementById('fullName').value.trim() : '';
+                    const email = document.getElementById('email') ? document.getElementById('email').value.trim() : '';
+                    const phone = document.getElementById('phone') ? document.getElementById('phone').value.trim() : '';
+                    const countrySelectVal = countrySelect ? countrySelect.value : '';
+                    const customCountryVal = customCountryCode ? customCountryCode.value.trim() : '';
 
                     let errors = [];
 
@@ -605,9 +608,56 @@
                         return;
                     }
 
-                    // Successful submission simulated state
-                    leadForm.classList.add('hidden');
-                    formSuccess.classList.remove('hidden');
+                    const submitBtn = leadForm.querySelector('button[type="submit"]');
+                    const originalBtnContent = submitBtn ? submitBtn.innerHTML : 'Quiero recibir mi invitación ✨';
+
+                    if (submitBtn) {
+                        submitBtn.disabled = true;
+                        submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+                        submitBtn.innerHTML = `
+                            <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                            Enviando registro...
+                        `;
+                    }
+
+                    try {
+                        const response = await fetch('/.netlify/functions/register', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                fullName: fullName,
+                                email: email,
+                                phone: phone,
+                                countrySelect: countrySelectVal,
+                                customCountryCode: customCountryVal
+                            })
+                        });
+
+                        const result = await response.json();
+
+                        if (!response.ok || !result.success) {
+                            throw new Error(result.error || 'Ocurrió un error al procesar tu solicitud.');
+                        }
+
+                        // On successful response, display success state view
+                        leadForm.classList.add('hidden');
+                        formSuccess.classList.remove('hidden');
+                    } catch (err) {
+                        console.error('Error enviando el formulario:', err);
+                        formErrorMessage.textContent = err.message || 'No se pudo conectar con el servidor. Inténtalo de nuevo.';
+                        formError.classList.remove('hidden');
+                    } finally {
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                            submitBtn.innerHTML = originalBtnContent;
+                        }
+                    }
                 });
             }
 

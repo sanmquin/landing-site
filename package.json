@@ -1,0 +1,16 @@
+{
+  "name": "casa-siete-landing",
+  "version": "1.0.0",
+  "description": "Casa Siete landing page with Netlify function and MongoDB Atlas integration",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "test": "node test/test-function.js"
+  },
+  "dependencies": {
+    "mongodb": "^6.14.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
